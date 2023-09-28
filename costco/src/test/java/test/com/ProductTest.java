@@ -52,14 +52,16 @@ public class ProductTest {
     public void tearDownMethod() throws Exception {
     }
 
-    @Test
-    public void testProductSearch() throws Exception {
-        driver.get("https://www.costco.com/");
-        driver.findElement(By.id("search-field")).click();
-        driver.findElement(By.id("search-field")).clear();
-        driver.findElement(By.id("search-field")).sendKeys("vaccum");
-        driver.findElement(By.id("formcatsearch")).submit();
-        driver.findElement(By.xpath("//img[@alt='Dyson Cyclone V10 Animal + Cordless Vacuum Cleaner']")).click();
+     @Test
+    public void testCostcoSearch() throws Exception {
+    driver.manage().window().maximize();
+    driver.get("https://www.costco.com/");
+    driver.findElement(By.id("search-field")).click();
+    driver.findElement(By.id("search-field")).clear();
+    driver.findElement(By.id("search-field")).sendKeys("LG TV");
+    driver.findElement(By.id("formcatsearch")).submit();
+    driver.get("https://www.costco.com/televisions.html?refine=%7C%7CBrand_attr-LG&krypto=dw5q1KQ07dKt3sM3tIVWbEiO8jaEeGpgp5W0IU6ck5%2FseEIxgxTilnKbFCkpln0WJ%2FERPopf%2FLu4yMu7LiWf%2FQ%3D%3D");
+    driver.findElement(By.xpath("//img[@alt='LG 65\" Class - OLED B2 Series - 4K UHD OLED TV - Allstate 3-Year Protection Plan Bundle Included for 5 Years of Total Coverage*']")).click();
     }
 
 }

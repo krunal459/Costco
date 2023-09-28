@@ -26,11 +26,6 @@ public class ProductTest {
     public ProductTest() {
     }
 
-    // TODO add test methods here.
-    // The methods must be annotated with annotation @Test. For example:
-    //
-    // @Test
-    // public void hello() {}
     @BeforeClass
     public static void setUpClass() throws Exception {
     }
@@ -44,7 +39,15 @@ public class ProductTest {
 
         System.setProperty("webdriver.chrome.driver", "c:\\data\\chromedriver.exe");//geeko driver for google browser
         driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        ChromeOptions options = new ChromeOptions(); 
+        options.addArguments("--headless"); 
+        options.addArguments("--disable-gpu"); 
+        options.addArguments("--window-size=1400,800");
+ 
+        WebDriver driver = new ChromeDriver(options);
+
+        
+       // driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
     }
 

@@ -68,7 +68,8 @@ public class DealsTest {
         Actions act = new Actions(driver);
         Action a1 = act.moveToElement(elem1).build();
         a1.perform();
-
+WebDriverWait wait = new WebDriverWait(driver, 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("Home & Kitchen")));
         driver.findElement(By.linkText("Home & Kitchen")).click();
         driver.findElement(By.xpath("//div[@id='WC_ContentAreaESpot_div_1_ProductsSpotlight']/div[2]/ul/li/div[2]/a/div")).click();
         driver.findElement(By.xpath("//img[@alt='Barcalounger Bradford Executive Office Chair']")).click();

@@ -35,7 +35,12 @@ private WebDriver driver;
    
      System.setProperty("webdriver.chrome.driver", "c:\\data\\chromedriver.exe");
         driver = new ChromeDriver();
-        baseUrl = "https://www.google.com/";
+       ChromeOptions options = new ChromeOptions(); 
+        options.addArguments("--headless"); 
+        options.addArguments("--disable-gpu"); 
+        options.addArguments("--window-size=1400,800");
+ 
+        WebDriver driver = new ChromeDriver(options);
         //driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);  // implicit wait// it wait until 30 sec
 //driver.manage()timeouts().implicitlyWait(timeSpan.FromSeconds(5));
     }

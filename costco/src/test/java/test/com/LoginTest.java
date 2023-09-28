@@ -23,7 +23,13 @@ public class LoginTest {
     public static void setUpClass() throws Exception {
         System.setProperty("webdriver.chrome.driver", "c:\\data\\chromedriver.exe");
         driver = new ChromeDriver();
-    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);  // implicit wait// it wait until 30 sec
+        
+        ChromeOptions options = new ChromeOptions(); 
+        options.addArguments("--headless"); 
+        options.addArguments("--disable-gpu"); 
+        options.addArguments("--window-size=1400,800");
+ 
+        WebDriver driver = new ChromeDriver(options);
     }
 
     @AfterClass

@@ -38,8 +38,17 @@ public class DealsTest {
     public void setUpMethod() throws Exception {
         System.setProperty("webdriver.chrome.driver", "c:\\data\\chromedriver.exe");
         driver = new ChromeDriver();
-        baseUrl = "https://www.google.com/";
-        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);  // implicit wait// it wait until 30 sec
+
+        ChromeOptions options = new ChromeOptions(); 
+        options.addArguments("--headless"); 
+        options.addArguments("--disable-gpu"); 
+        options.addArguments("--window-size=1400,800");
+ 
+        WebDriver driver = new ChromeDriver(options);
+
+        
+        // baseUrl = "https://www.google.com/";
+        // driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);  // implicit wait// it wait until 30 sec
 
     }
 

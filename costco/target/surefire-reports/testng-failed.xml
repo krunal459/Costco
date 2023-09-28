@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Command line suite]" verbose="0">
+  <test name="Command line test(failed)">
+    <classes>
+      <class name="test.com.SignInTest">
+        <methods>
+          <include name="tearDownClass"/>
+          <include name="setUpMethod"/>
+          <include name="tearDownMethod"/>
+          <include name="setUpClass"/>
+          <include name="testUntitledTestCase"/>
+        </methods>
+      </class> <!-- test.com.SignInTest -->
+      <class name="test.com.HoverTest">
+        <methods>
+          <include name="tearDownMethod"/>
+          <include name="setUpMethod"/>
+          <include name="tearDownClass"/>
+          <include name="hover"/>
+          <include name="setUpClass"/>
+        </methods>
+      </class> <!-- test.com.HoverTest -->
+      <class name="test.com.ProductTest">
+        <methods>
+          <include name="setUpClass"/>
+          <include name="testProductSearch"/>
+          <include name="setUpMethod"/>
+          <include name="tearDownMethod"/>
+          <include name="tearDownClass"/>
+        </methods>
+      </class> <!-- test.com.ProductTest -->
+      <class name="test.com.DealsTest">
+        <methods>
+          <include name="tearDownMethod"/>
+          <include name="setUpMethod"/>
+          <include name="testDeal"/>
+          <include name="setUpClass"/>
+        </methods>
+      </class> <!-- test.com.DealsTest -->
+      <class name="test.com.LoginTest">
+        <methods>
+          <include name="tearDownClass"/>
+          <include name="setUpMethod"/>
+          <include name="tearDownMethod"/>
+          <include name="setUpClass"/>
+        </methods>
+      </class> <!-- test.com.LoginTest -->
+      <class name="test.com.TravelTest">
+        <methods>
+          <include name="setUpMethod"/>
+          <include name="tearDownMethod"/>
+          <include name="testTravel"/>
+          <include name="setUpClass"/>
+        </methods>
+      </class> <!-- test.com.TravelTest -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [Command line suite] -->

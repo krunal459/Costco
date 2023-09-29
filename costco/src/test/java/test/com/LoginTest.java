@@ -23,7 +23,7 @@ public class LoginTest {
     @BeforeClass
     public static void setUpClass() throws Exception {
         System.setProperty("webdriver.chrome.driver", "c:\\data\\chromedriver.exe");
-        driver = new ChromeDriver();
+       // driver = new ChromeDriver();
         
         ChromeOptions options = new ChromeOptions(); 
         options.addArguments("--headless"); 

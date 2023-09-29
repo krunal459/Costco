@@ -21,12 +21,6 @@ public class HoverTest {
     private String baseUrl;
     public HoverTest() {
     }
-
-    // TODO add test methods here.
-    // The methods must be annotated with annotation @Test. For example:
-    //
-    // @Test
-    // public void hello() {}
     @BeforeClass
     public static void setUpClass() throws Exception {
     }
@@ -38,7 +32,7 @@ public class HoverTest {
     @BeforeMethod
     public void setUpMethod() throws Exception {
         System.setProperty("webdriver.chrome.driver", "c:\\data\\chromedriver.exe");//geeko driver for google browser
-        driver = new ChromeDriver();
+       // driver = new ChromeDriver();
         ChromeOptions options = new ChromeOptions(); 
         options.addArguments("--headless"); 
         options.addArguments("--disable-gpu"); 

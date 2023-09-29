@@ -29,8 +29,8 @@ public class SignInTest {
     @BeforeMethod
     public void setUpMethod() throws Exception {
     System.setProperty("webdriver.chrome.driver", "c:\\data\\chromedriver.exe");//geeko driver for google browser
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
+        // driver = new ChromeDriver();
+        // driver.manage().window().maximize();
         
         ChromeOptions options = new ChromeOptions(); 
         options.addArguments("--headless"); 

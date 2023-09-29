@@ -15,10 +15,6 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-/**
- *
- * @author vartr
- */
 public class ProductTest {
 
     private WebDriver driver;//global driver for selenium
@@ -39,7 +35,7 @@ public class ProductTest {
     public void setUpMethod() throws Exception {
 
         System.setProperty("webdriver.chrome.driver", "c:\\data\\chromedriver.exe");//geeko driver for google browser
-        driver = new ChromeDriver();
+        //driver = new ChromeDriver();
         ChromeOptions options = new ChromeOptions(); 
         options.addArguments("--headless"); 
         options.addArguments("--disable-gpu"); 
